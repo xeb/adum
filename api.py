@@ -162,6 +162,9 @@ def go_home():
     if not arm:
         return jsonify({"error": "Robot arm not initialized"}), 500
         
+    # Accept JSON data but don't require it
+    data = request.get_json(silent=True) or {}
+        
     try:
         home_coords = [118.7, 83.8, 280.6, -86.04, -2.15, -55.0]
         arm.send_coords(home_coords, 100)
@@ -232,6 +235,9 @@ def wave():
     """Perform wave gesture"""
     if not arm:
         return jsonify({"error": "Robot arm not initialized"}), 500
+        
+    # Accept JSON data but don't require it
+    data = request.get_json(silent=True) or {}
         
     try:
         def wave_movement():

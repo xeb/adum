@@ -1,0 +1,24 @@
+api:
+  host: "100.72.130.12"
+  port: 8044
+  base_url: "http://100.72.130.12:8044"
+
+cameras:
+  - id: 0
+    name: "cam_00"
+    device: "/dev/video0"
+  - id: 2
+    name: "cam_02"
+    device: "/dev/video2"
+  - id: 4
+    name: "cam_04"
+    device: "/dev/video4"
+
+client:
+  host: "0.0.0.0"
+  port: 8055
+  debug: true
+
+robot:
+  default_speed: 50
+  home_position: [118.7, 83.8, 280.6, -86.04, -2.15, -55.0]

@@ -11,6 +11,9 @@ install: ## Install dependencies using uv
 api: ## Start the mechArm270 API server
 	python3 api.py
 
+client: ## Start the client control interface
+	python3 client.py
+
 test: ## Run tests (placeholder)
 	@echo "Tests not implemented yet"
 
